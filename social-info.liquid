@@ -1,0 +1,35 @@
+{%- if settings.social_facebook_link != blank -%}
+<div class="social-list">
+  <ul>
+    
+    {%- if settings.social_facebook_link != blank -%}
+    <li><a href="{{ settings.social_facebook_link }}"> <i class="fab fa-facebook-f"></i> </a></li>
+    {%- endif -%}
+    
+    
+    {%- if settings.social_twitter_link != blank -%}
+    <li><a href="{{ settings.social_twitter_link }}"> <i class="fab fa-twitter"></i> </a></li>
+    {%- endif -%}
+    
+    
+    {%- if settings.social_pinterest_link != blank -%}
+    <li><a href="{{ settings.social_pinterest_link }}"> <i class="fab fa-pinterest-p"></i> </a></li>
+    {%- endif -%}
+    
+    
+    {%- if settings.social_instagram_link != blank -%}
+    <li><a href="{{ settings.social_instagram_link }}"> <i class="fab fa-instagram"></i> </a></li>
+    {%- endif -%}
+    
+    
+    {%- if settings.social_youtube_link != blank -%}
+    <li><a href="{{ settings.social_youtube_link }}"> <i class="fab fa-youtube"></i> </a></li>
+    {%- endif -%}
+    
+    
+    
+   
+  </ul>
+</div>
+
+{%- endif -%}
