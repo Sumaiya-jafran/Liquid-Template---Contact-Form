@@ -1,0 +1,71 @@
+@media (min-width: 768px)
+.col-md-10 {
+    flex: 0 0 auto;
+    width: 83.3333333333%;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}
+body, button {
+    font-size: calc(var(--font-size-base) * 1px);
+    font-family: var(--font-stack-body);
+    font-style: var(--font-style-body);
+    font-weight: var(--font-weight-body);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+.form h2 {
+    color: #111;
+    font-size: 30px!important;
+    font-weight: 600;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.header h1{
+  text-align: center;
+    padding-top: 50px;
+    color: orange;
+
+}
+.h2, h2 {
+    font-size: calc(((var(--font-h2-desktop))/ (var(--font-size-base))) * 1em);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  
+}
+}
+form {
+    margin: 35px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, select, textarea {
+    padding: 10px 18px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 3px;
+}
+.btn-custom {
+    background-color: #f15c22;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 3px 10px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #f15c22;
+}
+.boxshadow {
+    padding: 50px 30px;
+    box-shadow: 0 0 50px #3333331f;
+    margin: 50px 0;
+}
+
