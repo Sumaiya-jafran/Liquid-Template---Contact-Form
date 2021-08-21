@@ -1,0 +1,154 @@
+<div class="container">
+  <div class="header">
+    <h1>{{ section.settings.title }}</h1>
+    <span>{{ section.settings.subheading }}</span>
+  </div>
+  
+  <div class="row">
+    
+    
+    
+    <div class="col-md-6">
+      <div class="form boxshadow">
+        
+        <h2>{{ section.settings.formheading }}</h2>
+        
+        
+        
+        {%- assign formId = 'ContactUs' -%}
+        {% form 'contact', id: formId %}
+         {% include 'form-status', form: form, form_id: formId %}
+        
+        <div class="row">
+          <div class="col-md-12">
+            
+            
+            <label>Name</label>
+        	<input 
+                   placeholder="First and Last Name" 
+                   type="text" 
+                   name="contact[first_last_name]" 
+                   class="form-contrsol" 
+                   {% if form.first_last_name %}value="{{ form.first_last_name }}"{% endif %} 
+                     
+                   >
+            
+            <label>Phone Number</label>
+        	<input 
+                   placeholder="123-456-7890" 
+                   type="text" 
+                   name="contact[phone_number]" 
+                   class="form-contsrol" 
+                   {% if form.phone_number %}value="{{ form.phone_number }}"{% endif %} 
+                     
+                   >
+            
+            <label>Email Address</label>
+        	<input 
+                   placeholder="example@gmail.com" 
+                   type="email" 
+                   name="contact[email]" 
+                   class="form-contrsol" 
+                   {% if form.email %}value="{{ form.email }}"{% endif %} 
+                     
+                   >
+            
+            
+            
+            <label>Order #</label>
+        	<input 
+                   placeholder="If applicable" 
+                   type="text" 
+                   name="contact[order_no]" 
+                   class="form-contrsol" 
+                   {% if form.order_no %}value="{{ form.order_no }}"{% endif %} 
+                     
+                   >
+            
+              
+            <label>Message</label>
+            <textarea
+                   rows="8" 
+                   placeholder="Add any info that is need here" 
+                   type="textarea" 
+                   name="contact[message]" 
+                   class="form-contrsol" 
+                   {% if form.message %}value="{{ form.message }}"{% endif %} 
+                      
+                 ></textarea>
+        	 
+        	<input
+                   value="Submit" 
+                   type="submit" 
+                   name="contact[contact_us]" 
+                   class="btn btn-custom"                       
+                   >
+          </div>
+          
+          
+        </div>
+        
+        
+        {% endform %}
+        
+      </div>
+    </div>
+    
+    <div class="col-md-6"> 
+    	{% include "contact-info" %} 
+    </div>
+
+    
+  </div>
+</div>
+
+ 
+
+{% schema %}
+  {
+    "name": "Contact Us",
+    "settings": [
+		{
+			"label": "Title Name",
+			"id": "title",
+			"type": "text",
+			"default" : "CONTACT US"
+		},
+		{
+			"label" : "Sub Heading",
+			"id" : "subheading",
+			"type" : "text"
+		},
+		{
+			"label" : "Form Heading",
+			"id" : "formheading",
+			"type" : "text",
+			"default" : "FILL IN THE FORM BELOW TO CONTACT US"
+		},
+		 
+		{
+			"label" : "Contact Email",
+			"id" : "contactemail",
+			"type" : "text",
+			"default" : "wholesale@toolboxwidget.com"
+		},
+		{
+			"label" : "Contact Number",
+			"id" : "contactnumber",
+			"type" : "text",
+			"default" : "707-WIDGETS = (707) 943-4387"
+		}  
+		
+
+	] 
+	
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
